@@ -1,0 +1,153 @@
+<!--
+Computer Science 3 | 4th Quarter | Alternative Assessment 1
+Sodium, Aneesa Fareedah B. Biruar
+04/19/2026
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img src="media/logo.png" alt="Logo | NoughtHungry: For Zero Hunger" width="10%"></a>
+        <nav>
+            <a>Home</a>
+            <a>Hurting from Hunger</a>
+            <a>Healing from Hunger</a>
+            <a>About Us</a>
+            <p>Search…</p>
+        </nav>
+    </header>
+
+    <img src="media/signup_header.png" alt="Sign Up – Header | NoughtHungry: For Zero Hunger" class="header" id="signup_header">
+
+    <div id="wrapper">
+
+    <h2>Become a member of NoughtHungry: For Zero Hunger!</h2>
+
+    <div id="wrapper_form">
+
+        <section id="form">
+
+        <form onsubmit="return validateForm()">
+
+            <section class="formItem" id="s_fullName">
+                <label for="fullName" class="functioningLabel">Full Name: </label><br>
+                <input type="text" name="fullName" id="fullName" class="functioningInput"><br>
+                <span class="errorMessage" id="errorMessage_fullName"></span>
+            </section>
+
+            <section class="formItem" id="s_birthdate">
+                <label for="birthdate" class="functioningLabel">Birthdate: </label><br>
+                <input type="date" name="birthdate" id="birthdate" class="functioningInput"><br>
+                <span class="errorMessage" id="errorMessage_birthdate"></span>
+            </section>
+
+            <section class="formItem" id="s_sex">
+                <a class="functioningLabel">Sex: </a>
+                <input type="radio" name="sex" value="sex_female" id="sex_female">
+                <label for="sex_female" class="functioningInput">Female</label>
+
+                <input type="radio" name="sex" value="sex_male" id="sex_male">
+                <label for="sex_male" class="functioningInput">Male</label><br>
+                <span class="errorMessage" id="errorMessage_sex"></span>
+            </section>
+
+            <section class="formItem" id="s_email">
+                <label for="email" class="functioningLabel">E-Mail: </label><br>
+                <input type="email" name="email" id="email" class="functioningInput"><br>
+                <span class="errorMessage" id="errorMessage_email"></span>
+            </section>
+
+            <section class="formItem" id="s_username">
+                <label for="username" class="functioningLabel">Username: </label><br>
+                <input type="text" name="username" id="username" class="functioningInput"><br>
+                <span class="errorMessage" id="errorMessage_username"></span>
+            </section>
+
+            <section class="formItem" id="s_password">
+                <label for="password" class="functioningLabel">Password: </label><br>
+                <input type="password" name="password" id="password" class="functioningInput"><br>
+                <span class="errorMessage" id="errorMessage_password"></span>
+            </section>
+
+            <section class="formItem" id="s_confirmPassword">
+                <label for="confirmPassword" class="functioningLabel">Confirm Password: </label><br>
+                <input type="password" name="confirmPassword" id="confirmPassword" class="functioningInput"><br>
+                <span class="errorMessage" id="errorMessage_confirmPassword"></span>
+            </section>
+
+            <section class="formItem" id="s_volunteeringLocationPreference">
+                <label for="volunteeringLocationPreference" class="functioningLabel">Volunteering Location Preference (City, Country): </label><br>
+                <input type="text" name="volunteeringLocationPreference" id="volunteeringLocationPreference" class="functioningInput"><br>
+                <span class="errorMessage" id="errorMessage_volunteeringLocationPreference"></span>
+            </section>
+
+            <section class="formItem" id="s_preferredCommittee">
+                <label for="preferredCommittee" class="functioningLabel">Preferred Committee: </label><br>
+                <select name="preferredCommittee" id="preferredCommittee">
+                    <option value="preferredCommittee_none"> </option>
+                    <option value="preferredCommittee_logistics" class="functioningInput">Logistics Committee (Resourcing, outreach-planning, etc.)</option>
+                    <option value="preferredCommittee_treastury" class="functioningInput">Treasury Committee (Budget-preparing, funds-handling, etc.)</option>
+                    <option value="preferredCommittee_publicRelations" class="functioningInput">Public Relations Committee (Communicating, social media-managing, etc.)</option>
+                </select><br>
+                <span class="errorMessage" id="errorMessage_preferredCommittee"></span>
+            </section>
+
+            <section class="formItem" id="s_personalCauseForJoining">
+                <a class="functioningLabel">Personal Cause/s for Joining: </a><br>
+                <input type="checkbox" name="personalCauseForJoining" id="personalCauseForJoining_toContributeToSDG2ZH">
+                <label for="personalCauseForJoining_toContributeToSDG2ZH"  class="functioningInput">To contribute to SDG 2: Zero Hunger</label><br>
+
+                <input type="checkbox" name="personalCauseForJoining" id="personalCauseForJoining_toUnderstandAndConnectWithOthers">
+                <label for="personalCauseForJoining_toUnderstandAndConnectWithOthers"  class="functioningInput">To understand and connect with others</label><br>
+
+                <input type="checkbox" name="personalCauseForJoining" id="personalCauseForJoining_toGainExperience">
+                <label for="personalCauseForJoining_toGainExperience"  class="functioningInput">To gain experience</label><br>
+
+                <input type="checkbox" name="personalCauseForJoining" id="personalCauseForJoining_toBuildNetworksAndRelations">
+                <label for="personalCauseForJoinings_financetoBuildNetworksAndRelations" class="functioningInput">To build networks and relations</label><br>
+
+                <input type="checkbox" name="personalCauseForJoining" id="personalCauseForJoining_others">
+                <label for="personalCauseForJoining_others" class="functioningInput">Other/s</label><br>
+                <span class="errorMessage" id="errorMessage_personalCauseForJoining"></span>
+            </section>
+
+            <button type="submit">Join the fight against hunger!</button>
+        </form>
+
+            <a href="https://aneesaur.github.io/NaBiruar_2QProj_v1/">NoughtHungry: For Zero Hunger</a>
+        </section>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="footer_contact">
+            <p>Contact us!</p>
+            <div class="facebook"></div>
+            <div class="instagram"></div>
+            <div class="twitter"></div>
+        </div>
+        <a href="https://www.wfp.org/">World Food Programme</a>
+        <a href="https://www.fao.org/home/en">Food and Agriculture Organization of the United Nations</a>
+        <a href="https://sdgs.un.org/goals/goal2">Sustainable Development Goal 2</a>
+        <img src="media/logo.png" alt="Logo | NoughtHungry: For Zero Hunger" width="10%">
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
